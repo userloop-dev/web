@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--grayscale-100: #191a23;
+		--grayscale-200: #20212e;
+		--grayscale-300: #2c2d3c;
+		--grayscale-400: #5e6675;
+		--grayscale-500: #97a2b5;
+		--grayscale-600: #e1e7ed;
+
+		// Brand Colours
+		--indigo: #675dff;
+		--indigo-light: #9891ff;
+		--indigo-dark: #423ab9;
+
+		--default-radius: 0.5rem;
+		--small-radius: 0.25rem;
+	}
+}

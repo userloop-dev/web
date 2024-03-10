@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/app/*": ["src/app/*"],
+			"@/app-modules/*": ["src/app-modules/*"],
+			"@/app-components/*": ["src/app-components/*"],
+			"@/hooks/*": ["src/hooks/*"],
+			"@/utils": ["src/utils"]
+		},
+		"strict": true,
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"incremental": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"target": "ES2015",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
+	},
+	"include": ["**/*", ".next/types/**/*.ts"],
+	"exclude": ["node_modules"]
+}
