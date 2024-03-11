@@ -5,10 +5,12 @@ import { Button } from '@/app-components/button';
 
 import { M_Testimonials } from '@/app-modules/m-testimonials';
 import { M_Pricing } from '@/app-modules/m-pricing';
-import { M_ApiDocs } from '@/app-modules/m-api-docs';
+import { M_FeatureAPI } from '@/app-modules/m-feature-api';
 import { M_Application } from '@/app-modules/m-application';
 import { M_CallToAction } from '@/app-modules/m-call-to-action';
 import { M_Header } from '@/app-modules/m-header';
+import { M_FeatureDashboard } from '@/app-modules/m-feature-dashboard';
+import { M_FeatureSearch } from '@/app-modules/m-feature-search';
 
 export default function Page() {
 	return (
@@ -24,7 +26,9 @@ export default function Page() {
 
 			<div className='flex flex-col gap-6'>
 				<M_Application />
-				<M_ApiDocs />
+				<M_FeatureAPI />
+				<M_FeatureDashboard />
+				<M_FeatureSearch />
 				<M_Pricing />
 				<M_Testimonials />
 				<M_CallToAction />
