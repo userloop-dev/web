@@ -1,9 +1,10 @@
 import { HTMLAttributes } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUp, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/app-components/button';
+import { SM_Waitlist } from './sm-waitlist';
 
-const ctaHeader = 'Get Started Today';
+const ctaHeader = 'Join the Waitlist';
 const ctaDescription =
 	"Unlock the hidden stories in your application data. Seamlessly integrate through our straightforward Events API to capture every event with unmatched accuracy. This journey goes beyond mere data collection; it's about unveiling the narratives your data holds.";
 
@@ -15,9 +16,9 @@ export const M_CallToAction = ({}: M_CallToAction_Props) => (
 		<div className='z-40 text-6xl text-grayscale-600 font-semibold tracking-tighter text-center mb-6 px-6'>{ctaHeader}</div>
 		<div className='z-40 text-sm text-grayscale-600 font-normal max-w-2xl text-center leading-relaxed mb-6 px-6'>{ctaDescription}</div>
 		<div className='z-40 flex flex-row gap-4 mt-4 '>
-			<Button variant='indigo' className='text-sm' onClick={() => (window.location.href = process.env.NEXT_PUBLIC_CREATE_ACCOUNT_LINK as string)}>
-				Create your account
-				<ArrowUpRight className='h-4 w-4' />
+			<Button variant='indigo' className='text-sm' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+				Join Waitlist
+				<ArrowUp className='h-4 w-4' />
 			</Button>
 		</div>
 
