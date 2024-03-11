@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 import { cn } from '@/utils';
-import { LucideIcon, JapaneseYen, DollarSign, Euro, CreditCard, Coffee } from 'lucide-react';
+import { LucideIcon, JapaneseYen, DollarSign, Euro, CreditCard, Layout } from 'lucide-react';
 
 const pricingHeader = 'Pricing that scales with you';
 const pricingDescription =
@@ -15,11 +15,11 @@ const prices: PricingCard_Props[] = [
 			'With Userloop, enjoy the simplicity of our pay-per-event pricing. Start with a fixed monthly fee of just $2 USD, and for each event pay only $0.0001 USD. This model ensures you only pay for the value you extract, making it perfect for businesses of all sizes looking to scale efficiently without unnecessary costs. Dive into data-driven decision-making, knowing your investment grows directly with your success.',
 	},
 	{
-		Icon: Coffee,
-		tag: 'Free',
+		Icon: Layout,
+		tag: '',
 		header: 'Unlimited Members, Views, API Keys, Workspaces, and More',
 		content:
-			"We believe in empowering your team to achieve its fullest potential without worrying about escalating costs. That's why our unique approach ensures you're never charged for expanding your team, creating custom views, or accessing more workspaces. We're committed to fostering collaboration, innovation, and scalability by making these essential features completely free.",
+			"We believe in empowering your team to achieve its full potential without worrying about escalating costs. That's why our unique approach ensures you're never charged for expanding your team, creating custom views, or accessing more workspaces. We're committed to fostering collaboration, innovation, and scalability by making these essential features completely free.",
 	},
 ];
 
