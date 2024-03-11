@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react';
 import { ArrowUpRight, Play } from 'lucide-react';
 import { Button } from '@/app-components/button';
+import { SM_Waitlist } from './sm-waitlist';
 
 const headerDim = 'Your Data';
 const headerLit = 'in Focus';
@@ -16,14 +17,17 @@ export const M_Header = ({}: M_Header_Props) => (
 		<div className='z-30 text-sm text-grayscale-500 font-normal max-w-xl text-center leading-relaxed mb-6 px-6'>{headerDescription}</div>
 
 		<div className='z-30 flex flex-col md:flex-row gap-4 mt-4 '>
-			<Button variant='indigo' className='text-sm' onClick={() => (window.location.href = process.env.NEXT_PUBLIC_CREATE_ACCOUNT_LINK as string)}>
+			{/* <Button variant='indigo' className='text-sm' onClick={() => (window.location.href = process.env.NEXT_PUBLIC_CREATE_ACCOUNT_LINK as string)}>
 				Create an account
 				<ArrowUpRight className='h-4 w-4' />
-			</Button>
+			</Button> */}
+
 			{/* <Button variant='secondary' className='text-sm'>
 				Watch a product demo
 				<Play className='h-4 w-4' />
 			</Button> */}
+
+			<SM_Waitlist />
 		</div>
 
 		<div className='z-10 absolute pointer-events-none inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:50px_50px]'></div>
