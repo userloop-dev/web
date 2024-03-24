@@ -53,8 +53,8 @@ interface PricingCard_Props extends HTMLAttributes<HTMLDivElement> {
 const PricingCard = ({ Icon, tag, header, content, className }: PricingCard_Props) => (
 	<div className={cn('relative col-span-1 p-4 flex flex-col gap-4 border border-grayscale-300 bg-grayscale-200 rounded', className)}>
 		<div className='flex flex-row gap-4'>
-			<Icon strokeWidth={1.75} className='w-5 h-5 text-indigo mb-4' />
-			{tag && <div className='text-xs text-indigo-light font-normal mt-[3px]'>{tag}</div>}
+			<Icon strokeWidth={1.75} className='w-5 h-5 text-indigo-500 mb-4' />
+			{tag && <div className='text-xs text-indigo-400 font-normal mt-[3px]'>{tag}</div>}
 		</div>
 		<div className='text-md text-grayscale-600 font-normal'>{header}</div>
 		<div className='text-sm text-grayscale-500 font-normal leading-relaxed'>{content}</div>

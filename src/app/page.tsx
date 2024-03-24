@@ -10,15 +10,16 @@ import { M_CallToAction } from '@/app-modules/m-call-to-action';
 import { M_Header } from '@/app-modules/m-header';
 import { M_FeatureDashboard } from '@/app-modules/m-feature-dashboard';
 import { M_FeatureSearch } from '@/app-modules/m-feature-search';
+import { Button } from '@/app-components/button';
 
 export default function Page() {
 	return (
 		<div className='flex flex-col items-center bg-grayscale-200 min-h-[100vh]'>
 			<div className='z-50 flex flex-row gap-4 p-4 bg-[#20212E]/25 backdrop-blur-sm border-b border-grayscale-300 w-full sticky top-0'>
 				<Image src='/graphics/branding/logo.svg' alt='Userloop Logo' width={28} height={28} className='mr-auto' />
-				{/* <Button variant='secondary' onClick={() => (window.location.href = process.env.NEXT_PUBLIC_SIGN_IN_LINK as string)}>
+				<Button variant='secondary' onClick={() => (window.location.href = process.env.NEXT_PUBLIC_SIGN_IN_LINK as string)}>
 					Sign in
-				</Button> */}
+				</Button>
 			</div>
 
 			<M_Header />
