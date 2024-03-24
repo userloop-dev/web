@@ -9,7 +9,7 @@ const badgeVariants = cva(
 				primary: 'bg-grayscale-600 border-grayscale-600 text-grayscale-100 font-normal',
 				secondary: 'bg-grayscale-300 border-grayscale-300 text-grayscale-500 font-normal',
 				tertiary: 'bg-grayscale-200 border-grayscale-300 text-grayscale-500 font-normal',
-				indigo: 'bg-indigo border-indigo text-grayscale-100 font-normal',
+				indigo: 'bg-indigo-500 border-indigo-500 text-grayscale-100 font-normal',
 			},
 			size: {
 				regular: 'px-2 py-1',

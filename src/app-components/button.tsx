@@ -10,7 +10,7 @@ const buttonVariants = cva(
 				primary: 'text-grayscale-100 bg-grayscale-600 border border-transparent hover:bg-grayscale-500',
 				secondary: 'text-grayscale-500 border border-grayscale-300 bg-grayscale-200 hover:bg-grayscale-300',
 				tertiary: 'text-grayscale-500 border border-transparent bg-transparent hover:bg-grayscale-300',
-				indigo: 'text-grayscale-600 bg-indigo-dark border border-transparent hover:bg-indigo',
+				indigo: 'text-grayscale-600 bg-indigo-500 border border-transparent hover:bg-indigo-600',
 			},
 			size: {
 				regular: 'py-2 px-3',

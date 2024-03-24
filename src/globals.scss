@@ -4,19 +4,14 @@
 
 @layer base {
 	:root {
-		--grayscale-100: #191a23;
-		--grayscale-200: #20212e;
-		--grayscale-300: #2c2d3c;
-		--grayscale-400: #5e6675;
-		--grayscale-500: #97a2b5;
-		--grayscale-600: #e1e7ed;
-
-		// Brand Colours
-		--indigo: #675dff;
-		--indigo-light: #9891ff;
-		--indigo-dark: #423ab9;
+		--grayscale-100: #171520;
+		--grayscale-200: #1a1925;
+		--grayscale-300: #272738;
+		--grayscale-400: #383646;
+		--grayscale-500: #b4b4cc;
+		--grayscale-600: #eeeef0;
 
 		--default-radius: 0.5rem;
-		--small-radius: 0.25rem;
+		--small-radius: 0.425rem;
 	}
 }

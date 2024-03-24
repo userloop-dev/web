@@ -38,11 +38,6 @@ module.exports = {
 					500: 'var(--grayscale-500)',
 					600: 'var(--grayscale-600)',
 				},
-				indigo: {
-					DEFAULT: 'var(--indigo)',
-					light: 'var(--indigo-light)',
-					dark: 'var(--indigo-dark)',
-				},
 			},
 		},
 	},
