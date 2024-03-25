@@ -9,10 +9,10 @@ const pricingDescription =
 const prices: PricingCard_Props[] = [
 	{
 		Icon: CreditCard,
-		tag: '$2 USD / Month + $0.0001 USD / Event',
+		tag: '$10 USD / Month + $0.0001 USD / Event',
 		header: 'Event-Based Pricing',
 		content:
-			'With Userloop, enjoy the simplicity of our pay-per-event pricing. Start with a fixed monthly fee of just $2 USD, and for each event pay only $0.0001 USD. This model ensures you only pay for the value you extract, making it perfect for businesses of all sizes looking to scale efficiently without unnecessary costs. Dive into data-driven decision-making, knowing your investment grows directly with your success.',
+			'With Userloop, enjoy the simplicity of our pay-per-event pricing. Start with a fixed monthly fee of just $10 USD, and for each event pay only $0.0001 USD. This model ensures you only pay for the value you extract, making it perfect for businesses of all sizes looking to scale efficiently without unnecessary costs. Dive into data-driven decision-making, knowing your investment grows directly with your success.',
 	},
 	{
 		Icon: Layout,
