@@ -2,16 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	::-webkit-scrollbar {
+		width: 0.5rem;
+		border-radius: 100px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: var(--grayscale-100);
+		border-radius: 100px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: var(--grayscale-300);
+		border-radius: 100px;
+	}
+}
+
 @layer base {
 	:root {
-		--grayscale-100: #171520;
-		--grayscale-200: #1a1925;
-		--grayscale-300: #272738;
-		--grayscale-400: #383646;
-		--grayscale-500: #b4b4cc;
-		--grayscale-600: #eeeef0;
+		--surface-100: #0f1011;
+		--surface-200: #080808;
 
-		--default-radius: 0.5rem;
-		--small-radius: 0.425rem;
+		--gray-100: #1a1c1e;
+		--gray-200: #1f1f1f;
+		--gray-300: #26282d;
+		--gray-400: #2e2e2e;
+		--gray-500: #454545;
+		--gray-600: #878787;
+		--gray-700: #8f8f8f;
+		--gray-800: #afafaf;
+		--gray-900: #d6d6d6;
+		--gray-1000: #ededed;
+
+		--blue-100: #f0f7ff;
+		--blue-200: #e9f4ff;
+		--blue-300: #dff0ff;
+		--blue-400: #cbe7ff;
+		--blue-500: #94cdff;
+		--blue-600: #49aeff;
+		--blue-700: #1ab1e1;
+		--blue-800: #05a0d1;
+		--blue-900: #0594c2;
+		--blue-1000: #0589b3;
+
+		--green-100: #ecfdec;
+		--green-200: #e6fce6;
+		--green-300: #d2fad2;
+		--green-400: #b9f5bc;
+		--green-500: #82ec8d;
+		--green-600: #4be15d;
+		--green-700: #28a948;
+		--green-800: #46aa78;
+		--green-900: #0f7e32;
+		--green-1000: #003900;
+
+		--red-100: #ffedef;
+		--red-200: #ffe8ea;
+		--red-300: #ffe3e5;
+		--red-400: #ffd7d6;
+		--red-500: #ffb1b3;
+		--red-600: #ff676c;
+		--red-700: #fc0036;
+		--red-800: #d12a05;
+		--red-900: #b12405;
+		--red-1000: #47000c;
+
+		--default-radius: 0.3rem;
+		--small-radius: 0.2rem;
+
+		::-moz-selection {
+			/* Code for Firefox */
+			background: #05a0d150;
+		}
+
+		::selection {
+			background: #05a0d150;
+		}
+	}
+
+	.dark {
+		--surface-100: #0f1011;
+		--surface-200: #080808;
+
+		--gray-100: #1a1c1e;
+		--gray-200: #1f1f1f;
+		--gray-300: #26282d;
+		--gray-400: #2e2e2e;
+		--gray-500: #454545;
+		--gray-600: #878787;
+		--gray-700: #8f8f8f;
+		--gray-800: #afafaf;
+		--gray-900: #d6d6d6;
+		--gray-1000: #ededed;
 	}
 }

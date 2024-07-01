@@ -1,46 +1,83 @@
 'use client';
 
 import Image from 'next/image';
-
-import { M_Testimonials } from '@/app-modules/m-testimonials';
-import { M_Pricing } from '@/app-modules/m-pricing';
-import { M_FeatureAPI } from '@/app-modules/m-feature-api';
-import { M_Application } from '@/app-modules/m-application';
-import { M_CallToAction } from '@/app-modules/m-call-to-action';
-import { M_Header } from '@/app-modules/m-header';
-import { M_FeatureDashboard } from '@/app-modules/m-feature-dashboard';
-import { M_FeatureSearch } from '@/app-modules/m-feature-search';
+import { AlarmClock, Database, Play, Tv2, Waypoints } from 'lucide-react';
 import { Button } from '@/app-components/button';
 
 export default function Page() {
 	return (
-		<div className='flex flex-col items-center bg-grayscale-200 min-h-[100vh]'>
-			<div className='z-50 flex flex-row gap-4 p-4 bg-[#20212E]/25 backdrop-blur-sm border-b border-grayscale-300 w-full sticky top-0'>
-				<Image src='/graphics/branding/logo.svg' alt='Userloop Logo' width={28} height={28} className='mr-auto' />
-				<Button variant='secondary' onClick={() => (window.location.href = process.env.NEXT_PUBLIC_SIGN_IN_LINK as string)}>
-					Sign in
-				</Button>
-			</div>
+		<div className='bg-surface-200 relative flex flex-col lg:flex-row gap-2 p-4 w-[100vw] h-[100vh]'>
+			<div className='absolute top-0 left-0 h-full ml-4 border-dashed border-l border-gray-300' />
+			<div className='absolute top-0 right-0 h-full mr-4 border-dashed border-l border-gray-300' />
+			<div className='absolute top-0 left-0 w-full mt-4 border-dashed border-t border-gray-300' />
+			<div className='absolute bottom-0 left-0 w-full mb-4 border-dashed border-b border-gray-300' />
 
-			<M_Header />
+			<div className='flex flex-row gap-2 w-full h-full'>
+				<div className='w-md max-w-md flex flex-col gap-2 overflow-y-scroll no-scrollbar'>
+					<div className='flex-1 flex flex-col gap-2 p-4 bg-gray-100 border border-gray-300 rounded-small'>
+						<Image src='/logo_mark.svg' alt='Userloop Logo' width={30} height={30} className='mb-4' />
+						<div className='text-xl text-gray-1000 font-normal'>Userloop</div>
+						<div className='text-xs text-gray-800 font-normal leading-relaxed'>
+							Userloop is an events system. Easily ingest events via the Events API to power visualizations, alarms, workflows, and more. Its time
+							to centralize your teams intelligence.'
+						</div>
+					</div>
 
-			<div className='flex flex-col gap-6'>
-				<M_Application />
-				<M_FeatureAPI />
-				<M_FeatureDashboard />
-				<M_FeatureSearch />
-				<M_Pricing />
-				<M_Testimonials />
-				<M_CallToAction />
-			</div>
+					<div className='flex flex-col gap-2 p-4 bg-surface-100 border border-gray-300 rounded-small'>
+						<Database strokeWidth={1.75} className='h-4 w-4 text-gray-600 mb-1' />
+						<div className='text-sm text-gray-900 font-normal'>Events Ingestion</div>
+						<div className='text-xs text-gray-800 font-normal leading-relaxed'>
+							Stream your events to Userloop via the Events API. Userloop provides a general structure for an event, but the data you emit is up
+							to you. Userloop is designed to be flexible and work with any event structure.
+						</div>
+					</div>
 
-			<div className='z-50 w-full flex flex-col md:flex-row md:items-center gap-4 p-4 bg-grayscale-100 border-t border-grayscale-300'>
-				<Image src='/graphics/branding/logo_muted.svg' alt='Userloop Logo' width={28} height={28} />
-				<div className='text-xs text-grayscale-500 mr-auto leading-relaxed'>
-					We're always available to chat. Reach out at matt@userloop.dev with any questions or requests.
+					<div className='flex flex-col gap-2 p-4 bg-surface-100 border border-gray-300 rounded-small'>
+						<Tv2 strokeWidth={1.75} className='h-4 w-4 text-gray-600 mb-1' />
+						<div className='text-sm text-gray-900 font-normal'>Views</div>
+						<div className='text-xs text-gray-800 font-normal leading-relaxed'>
+							Have some events in Userloop? Create dashboards to visualize your data. Userloop provides preset UI components to help you visually
+							construct dashboards. We are always expanding the capabilities of our dashboards.
+						</div>
+					</div>
+
+					<div className='flex flex-col gap-2 p-4 bg-surface-100 border border-gray-300 rounded-small'>
+						<Waypoints strokeWidth={1.75} className='h-4 w-4 text-gray-600 mb-1' />
+						<div className='text-sm text-gray-900 font-normal'>Workflows</div>
+						<div className='text-xs text-gray-800 font-normal leading-relaxed'>
+							Looking to trigger workflows? Userloop can help. Workflows are a series of actions that are triggered by events. Workflows can be
+							used to automate tasks, send notifications, or trigger logic specific to your application.
+						</div>
+					</div>
+
+					<div className='flex flex-col gap-2 p-4 bg-surface-100 border border-gray-300 rounded-small'>
+						<AlarmClock strokeWidth={1.75} className='h-4 w-4 text-gray-600 mb-1' />
+						<div className='text-sm text-gray-900 font-normal'>Alarms</div>
+						<div className='text-xs text-gray-800 font-normal leading-relaxed'>
+							Emitting some mission critical data? Set up alarms to alert you when certain conditions are met. When combined with dashboards,
+							Userloop is a powerful tool for your oncall engineers.
+						</div>
+					</div>
 				</div>
 
-				<div className='text-xs text-grayscale-500'>© Userloop, Inc. {new Date().getFullYear()}</div>
+				<div className='relative w-full flex flex-col gap-2 p-4 bg-gradient-to-t from-surface-200 to-surface-100 border border-gray-300 rounded-small group cursor-pointer overflow-clip'>
+					<div className='flex flex-row gap-4 ml-auto z-50'>
+						<Button variant='secondary' onClick={() => window.open(process.env.NEXT_PUBLIC_SIGN_IN_LINK)}>
+							Sign In
+						</Button>
+						<Button variant='primary' onClick={() => window.open(process.env.NEXT_PUBLIC_CREATE_ACCOUNT_LINK)}>
+							Try for Free
+						</Button>
+					</div>
+
+					<Image
+						src='/screenshot.png'
+						alt='Screenshot'
+						width={1000}
+						height={1000}
+						className='w-full absolute -bottom-10 -right-40 z-40 transition-all border border-gray-300 rounded'
+					/>
+				</div>
 			</div>
 		</div>
 	);
