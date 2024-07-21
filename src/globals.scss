@@ -32,6 +32,10 @@
 }
 
 @layer base {
+	* {
+		cursor: default !important;
+	}
+
 	:root {
 		--surface-100: #131415;
 		--surface-200: #0b0c0c;
@@ -98,7 +102,7 @@
 		--surface-200: #080808;
 
 		--gray-100: #1a1c1e;
-		--gray-200: #1f1f1f;
+		--gray-200: #1d1f21;
 		--gray-300: #26282d;
 		--gray-400: #2e2e2e;
 		--gray-500: #454545;

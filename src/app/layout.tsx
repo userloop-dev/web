@@ -1,5 +1,6 @@
 import '../globals.scss';
 import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { cn } from '@/utils';
 
 import { GeistSans } from 'geist/font/sans';
@@ -17,10 +18,12 @@ export default (ctx: any) => {
 				<link rel='shortcut icon' href='/favicon.png' />
 			</head>
 
-			<body>
+			<body className='bg-surface-100'>
 				{ctx.children}
 				<Analytics />
 			</body>
+
+			<GoogleAnalytics gaId='AW-16492043817' />
 		</html>
 	);
 };
