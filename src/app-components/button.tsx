@@ -4,24 +4,26 @@ import { cn } from '@/utils';
 import { Slot } from '@radix-ui/react-slot';
 
 const buttonVariants = cva(
-	'flex flex-row gap-2 items-center justify-center rounded-small text-xs font-normal transition-all disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none outline-none',
+	'flex flex-row gap-2 items-center justify-center text-xs font-normal transition-all disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none outline-none',
 	{
 		variants: {
 			variant: {
-				primary: 'text-gray-100 bg-gray-900 border border-transparent hover:bg-gray-1000',
-				secondary: 'text-gray-800 border border-gray-100 bg-gray-100 hover:border-gray-400 hover:bg-gray-400',
-				tertiary: 'text-gray-800 border border-transparent bg-gray-300 hover:bg-gray-400',
+				solid: 'text-surface-light border border-text-dark bg-text-dark hover:border-text-extraDark hover:bg-text-extraDark',
+				muted: 'text-text-medium border border-surface-medium bg-surface-medium hover:border-surface-dark hover:bg-surface-dark',
+				outline: 'text-text-medium border border-border bg-surface-light hover:border-border hover:bg-surface-medium focus:border-border-focus',
+				ghost: 'text-text-medium border border-transparent bg-transparent hover:border-surface-medium hover:bg-surface-medium',
 
-				blue: 'text-blue-100 border border-transparent bg-blue-800 hover:bg-blue-900',
-				red: 'text-red-100 border border-transparent bg-red-800 hover:bg-red-900',
+				error: 'text-red-50 border border-red-700 bg-red-700 hover:border-red-800 hover:bg-red-800',
 			},
 			size: {
-				regular: 'py-2 px-3',
-				small: 'p-2',
+				regular: 'py-2 px-3 rounded',
+				small: 'p-2 rounded',
+				icon: 'p-2 h-[36px] w-[36px] rounded',
+				rounded: 'py-2 px-4 rounded-full',
 			},
 		},
 		defaultVariants: {
-			variant: 'primary',
+			variant: 'solid',
 			size: 'regular',
 		},
 	}

@@ -11,10 +11,7 @@ export default (ctx: any) => {
 		<html lang='en' className={cn('w-full h-full', GeistSans.variable, GeistMono.variable)}>
 			<head>
 				<title>Userloop</title>
-				<meta
-					name='description'
-					content='Userloop is an events system. Easily ingests events via the Events API to power visualizations, alarms, workflows, and more. Its time to centralize your teams intelligence.'
-				/>
+				<meta name='description' content="Your startup's data platform" />
 				<link rel='shortcut icon' href='/favicon.png' />
 			</head>
 

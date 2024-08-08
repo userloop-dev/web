@@ -1,5 +1,3 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: 'jit',
@@ -29,62 +27,69 @@ module.exports = {
 			borderRadius: {
 				DEFAULT: 'var(--default-radius)',
 				small: 'var(--small-radius)',
+				// Custom Tremor Border Radius
+				'tremor-default': 'var(--default-radius)',
+				'tremor-small': 'var(--small-radius)',
+				'tremor-full': '9999px',
+			},
+			// Custom Tremor Shadows
+			boxShadow: {
+				// Light
+				'tremor-input': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+				'tremor-card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+				'tremor-dropdown': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+				// Dark
+				'dark-tremor-input': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+				'dark-tremor-card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+				'dark-tremor-dropdown': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+			},
+			// Custom Tremor Font Sizing
+			fontSize: {
+				xs: '12px',
+				'tremor-label': ['0.75rem', { lineHeight: '1rem' }],
+				'tremor-default': ['0.875rem', { lineHeight: '1.25rem' }],
+				'tremor-title': ['1.125rem', { lineHeight: '1.75rem' }],
+				'tremor-metric': ['1.875rem', { lineHeight: '2.25rem' }],
+			},
+			fontWeight: {
+				normal: '375',
 			},
 			colors: {
-				brand: {
-					workflows: 'var(--brand-workflows)',
+				background: 'var(--background)',
+				border: {
+					DEFAULT: 'var(--border)',
+					focus: 'var(--border-focus)',
 				},
 				surface: {
-					100: 'var(--surface-100)',
-					200: 'var(--surface-200)',
+					light: 'var(--surface-light)',
+					medium: 'var(--surface-medium)',
+					dark: 'var(--surface-dark)',
 				},
-				gray: {
-					100: 'var(--gray-100)',
-					200: 'var(--gray-200)',
-					300: 'var(--gray-300)',
-					400: 'var(--gray-400)',
-					500: 'var(--gray-500)',
-					600: 'var(--gray-600)',
-					700: 'var(--gray-700)',
-					800: 'var(--gray-800)',
-					900: 'var(--gray-900)',
-					1000: 'var(--gray-1000)',
+				text: {
+					light: 'var(--text-light)',
+					medium: 'var(--text-medium)',
+					dark: 'var(--text-dark)',
+					extraDark: 'var(--text-extra-dark)',
 				},
-				blue: {
-					100: 'var(--blue-100)',
-					200: 'var(--blue-200)',
-					300: 'var(--blue-300)',
-					400: 'var(--blue-400)',
-					500: 'var(--blue-500)',
-					600: 'var(--blue-600)',
-					700: 'var(--blue-700)',
-					800: 'var(--blue-800)',
-					900: 'var(--blue-900)',
-					1000: 'var(--blue-1000)',
-				},
-				green: {
-					100: 'var(--green-100)',
-					200: 'var(--green-200)',
-					300: 'var(--green-300)',
-					400: 'var(--green-400)',
-					500: 'var(--green-500)',
-					600: 'var(--green-600)',
-					700: 'var(--green-700)',
-					800: 'var(--green-800)',
-					900: 'var(--green-900)',
-					1000: 'var(--green-1000)',
-				},
-				red: {
-					100: 'var(--red-100)',
-					200: 'var(--red-200)',
-					300: 'var(--red-300)',
-					400: 'var(--red-400)',
-					500: 'var(--red-500)',
-					600: 'var(--red-600)',
-					700: 'var(--red-700)',
-					800: 'var(--red-800)',
-					900: 'var(--red-900)',
-					1000: 'var(--red-1000)',
+
+				// Custom Tremor Styles
+				tremor: {
+					brand: {
+						DEFAULT: 'var(--text-medium)',
+					},
+					background: {
+						DEFAULT: 'var(--surface-light)',
+					},
+					border: {
+						DEFAULT: 'var(--border)',
+					},
+					ring: {
+						DEFAULT: 'var(--border)',
+					},
+					content: {
+						DEFAULT: 'var(--text-medium)',
+						emphasis: 'var(--text-medium)',
+					},
 				},
 			},
 			keyframes: {
@@ -143,5 +148,21 @@ module.exports = {
 			},
 		},
 	},
+	safelist: [
+		...['[#0369a1]', '[#15803d]', '[#b91c1c]', '[#ea580c]', '[#eab308]', '[#6d28d9]', '[#db2777]'].flatMap((customColor) => [
+			`bg-${customColor}`,
+			`border-${customColor}`,
+			`hover:bg-${customColor}`,
+			`hover:border-${customColor}`,
+			`hover:text-${customColor}`,
+			`fill-${customColor}`,
+			`ring-${customColor}`,
+			`stroke-${customColor}`,
+			`text-${customColor}`,
+			`ui-selected:bg-${customColor}`,
+			`ui-selected:border-${customColor}`,
+			`ui-selected:text-${customColor}`,
+		]),
+	],
 	plugins: [require('tailwindcss-animate')],
 };
